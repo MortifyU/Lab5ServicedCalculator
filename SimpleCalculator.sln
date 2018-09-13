@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{75012876-22E6-4670-8828-31AE2A2B065D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{32F11188-6C3C-4365-AA65-AC01B307B877}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{75012876-22E6-4670-8828-31AE2A2B065D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75012876-22E6-4670-8828-31AE2A2B065D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75012876-22E6-4670-8828-31AE2A2B065D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F11188-6C3C-4365-AA65-AC01B307B877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F11188-6C3C-4365-AA65-AC01B307B877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F11188-6C3C-4365-AA65-AC01B307B877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F11188-6C3C-4365-AA65-AC01B307B877}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
