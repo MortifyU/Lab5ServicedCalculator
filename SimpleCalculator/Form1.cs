@@ -6,15 +6,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SimpleCalculator.CalculatorReference;
 
 namespace SimpleCalculator
 {
     public partial class frmCalculator : Form
     {
+
         string operand1 = string.Empty;
         string operand2 = string.Empty;
         string result;
         char operation;
+        private CalculatorSoapClient calcRef;
 
         public frmCalculator()
         {
@@ -23,6 +26,7 @@ namespace SimpleCalculator
 
         private void frmCalculator_Load(object sender, EventArgs e)
         {
+            calcRef = new CalculatorReference.CalculatorSoapClient();
             btnOne.Click += new EventHandler(btn_Click);
             btnTwo.Click += new EventHandler(btn_Click);
             btnThree.Click += new EventHandler(btn_Click);
@@ -159,21 +163,21 @@ namespace SimpleCalculator
             switch (operation)
             {
                 case '+':
-                    result = (opr1 + opr2).ToString();
+                    result = calcRef.Add(opr1, opr2).ToString();
                     break;
 
                 case '-':
-                    result = (opr1 - opr2).ToString();
+                    result = calcRef.Subtract(opr1, opr2).ToString();
                     break;
 
                 case '*':
-                    result = (opr1 * opr2).ToString();
+                    result = calcRef.Multiply(opr1, opr2).ToString();
                     break;
 
                 case '/':
                     if (opr2 != 0)
                     {
-                        result = (opr1 / opr2).ToString();
+                        result = calcRef.Divide(opr1, opr2).ToString();
                     }
                     else
                     {
@@ -197,7 +201,7 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (Math.Sqrt(opr1)).ToString();
+                txtInput.Text = calcRef.Square(opr1).ToString();
             }
         }
 
@@ -206,7 +210,7 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (opr1 / 2).ToString();
+                txtInput.Text = calcRef.Halve(opr1).ToString();
             }
         }
 
@@ -215,7 +219,7 @@ namespace SimpleCalculator
             double opr1;
             if (double.TryParse(txtInput.Text, out opr1))
             {
-                txtInput.Text = (opr1 / 4).ToString();
+                txtInput.Text = calcRef.Quarter(opr1).ToString();
             }
         }
 

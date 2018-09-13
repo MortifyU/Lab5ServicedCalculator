@@ -2,6 +2,8 @@
 {
     partial class frmCalculator
     {
+
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
