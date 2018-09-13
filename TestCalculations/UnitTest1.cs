@@ -13,6 +13,7 @@ namespace TestCalculations
             var sum = calcRef.Add(4, 12);
             Assert.AreEqual(16, sum);
         }
+
         [TestMethod]
         public void TestSubtract()
         {
@@ -20,6 +21,7 @@ namespace TestCalculations
             var diff = calcRef.Subtract(4, 12);
             Assert.AreEqual(-8, diff);
         }
+
         [TestMethod]
         public void TestMultiply()
         {
@@ -27,6 +29,7 @@ namespace TestCalculations
             var times = calcRef.Multiply(4, 12);
             Assert.AreEqual(48, times);
         }
+
         [TestMethod]
         public void TestDivide()
         {
@@ -34,6 +37,7 @@ namespace TestCalculations
             var difference = calcRef.Divide(12, 4);
             Assert.AreEqual(3, difference);
         }
+
         [TestMethod]
         public void TestSquare()
         {
@@ -41,6 +45,7 @@ namespace TestCalculations
             var sqrt = calcRef.Square(9);
             Assert.AreEqual(3, sqrt);
         }
+
         [TestMethod]
         public void TestHalve()
         {
@@ -48,6 +53,7 @@ namespace TestCalculations
             var half = calcRef.Halve(12);
             Assert.AreEqual(6, half);
         }
+
         [TestMethod]
         public void TestQuarter()
         {
